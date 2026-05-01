@@ -1,13 +1,57 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio</title>
+
+    <!-- SEO de base -->
+    <title>Christophe Salou — Développeur Web & Mobile</title>
+    <meta
+      name="description"
+      content="Développeur Web & Mobile spécialisé en React, React Native, TypeScript et Laravel. Basé en France."
+    />
+    <meta
+      name="keywords"
+      content="développeur web, développeur mobile, React, React Native, Laravel, TypeScript, France"
+    />
+    <meta name="author" content="Christophe Salou" />
+    <link rel="canonical" href="https://portfolio.bezedache.com" />
+
+    <!-- Open Graph (Facebook, LinkedIn) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://portfolio.bezedache.com" />
+    <meta property="og:title" content="Christophe Salou — Développeur Web & Mobile" />
+    <meta
+      property="og:description"
+      content="Développeur Web & Mobile spécialisé en React, React Native, TypeScript et Laravel."
+    />
+    <meta property="og:image" content="https://portfolio.bezedache.com/og-image.png" />
+    <meta property="og:locale" content="fr_FR" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Christophe Salou — Développeur Web & Mobile" />
+    <meta
+      name="twitter:description"
+      content="Développeur Web & Mobile spécialisé en React, React Native, TypeScript et Laravel."
+    />
+    <meta name="twitter:image" content="https://portfolio.bezedache.com/og-image.png" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Christophe Salou",
+        "jobTitle": "Développeur Web & Mobile",
+        "url": "https://portfolio.bezedache.com",
+        "sameAs": ["https://github.com/bezedache29", "https://linkedin.com/in/christophe-salou"],
+        "knowsAbout": ["React", "React Native", "TypeScript", "Laravel"]
+      }
+    </script>
   </body>
 </html>
