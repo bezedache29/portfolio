@@ -62,6 +62,14 @@ export function ProjectsSection() {
           <motion.article
             key={index}
             onClick={() => setSelectedProject(project as DetailedProject)}
+            role='button'
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault()
+                setSelectedProject(project as DetailedProject)
+              }
+            }}
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.4, delay: index * 0.15, type: 'spring', stiffness: 100 }}

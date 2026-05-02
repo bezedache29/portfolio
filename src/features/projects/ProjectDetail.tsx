@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react'
 import { FaGithub } from 'react-icons/fa'
 
@@ -14,11 +14,18 @@ export interface DetailedProject {
   techStack: { label: string; value: string }[]
   features: { category: string; points: string[] }[]
   imageFit?: 'contain' | 'cover'
-  imagesFit?: 'contain' | 'cover'
+  imagesFit?: 'contain' | 'cover' | 'object-contain'
 }
 
 export function ProjectDetail({ project }: { project: DetailedProject }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
+  }, [project])
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % project.images.length)
@@ -76,7 +83,9 @@ export function ProjectDetail({ project }: { project: DetailedProject }) {
               src={project.images[currentImageIndex]}
               alt={`${project.title} screenshot ${currentImageIndex + 1}`}
               className={`w-full h-full transition-opacity duration-500 ${
-                project.imagesFit ? project.imagesFit : 'object-cover'
+                project.imagesFit === 'contain' || project.imagesFit === 'object-contain'
+                  ? 'object-contain'
+                  : 'object-cover'
               }`}
             />
 
@@ -84,12 +93,16 @@ export function ProjectDetail({ project }: { project: DetailedProject }) {
             {project.images.length > 1 && (
               <>
                 <button
+                  type='button'
+                  aria-label='Image précédente'
                   onClick={prevImage}
                   className='absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/50 hover:bg-yellow-500 text-white hover:text-black rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-sm'
                 >
                   <ChevronLeft size={24} />
                 </button>
                 <button
+                  type='button'
+                  aria-label='Image suivante'
                   onClick={nextImage}
                   className='absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/50 hover:bg-yellow-500 text-white hover:text-black rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-sm'
                 >

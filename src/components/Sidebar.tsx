@@ -104,6 +104,8 @@ export function Sidebar() {
             href={personalInfo.github}
             target='_blank'
             rel='noreferrer'
+            aria-label='GitHub'
+            title='GitHub'
             className='text-white/50 hover:text-white transition-colors'
           >
             <FaGithub size={20} />
@@ -112,6 +114,8 @@ export function Sidebar() {
             href={personalInfo.linkedin}
             target='_blank'
             rel='noreferrer'
+            aria-label='LinkedIn'
+            title='LinkedIn'
             className='text-white/50 hover:text-white transition-colors'
           >
             <FaLinkedin size={20} />
@@ -120,6 +124,8 @@ export function Sidebar() {
             href={personalInfo.x}
             target='_blank'
             rel='noreferrer'
+            aria-label='X (Twitter)'
+            title='X (Twitter)'
             className='text-white/50 hover:text-white transition-colors'
           >
             <FaXTwitter size={20} />
@@ -128,6 +134,8 @@ export function Sidebar() {
             href={personalInfo.sto}
             target='_blank'
             rel='noreferrer'
+            aria-label='Stack Overflow'
+            title='Stack Overflow'
             className='text-white/50 hover:text-white transition-colors'
           >
             <FaStackOverflow size={20} />

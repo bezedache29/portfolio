@@ -275,7 +275,7 @@ export const projects = [
     ],
   },
   {
-    title: "App Contrôle d'Accès - Zaint Frégantables",
+    title: 'Scanner de billets - App Mobile',
     shortDescription:
       "Application mobile React Native dédiée au contrôle d'accès et au scan de billets via smartphone.",
     tags: ['React Native', 'Mobile', 'API Yapla', 'Scanner'],

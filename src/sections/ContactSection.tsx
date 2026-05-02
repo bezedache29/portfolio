@@ -28,10 +28,12 @@ export function ContactSection() {
     const form = e.currentTarget
     const formData = new FormData(form)
 
+    const name = (formData.get('name') as string)?.trim()
     const email = (formData.get('email') as string)?.trim()
+    const subject = (formData.get('subject') as string)?.trim()
     const message = (formData.get('message') as string)?.trim()
 
-    if (!email || !message || message.length < 10) {
+    if (!name || !email || !subject || !message || message.length < 10) {
       setAlert({
         type: 'error',
         message: 'Veuillez remplir correctement tous les champs.',

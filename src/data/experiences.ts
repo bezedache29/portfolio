@@ -44,7 +44,7 @@ export const experiences = [
     startDate: 'Mars 2022',
     endDate: 'Juin 2022',
     description: [
-      "Amélioration et intégration de nouvelles fonctionnalités à l'applicationmobile déjà en place",
+      "Amélioration et intégration de nouvelles fonctionnalités à l'application mobile déjà en place",
       'Mise en place de Redux sur le projet',
       'Utilisation de la nouvelle API interne',
     ],

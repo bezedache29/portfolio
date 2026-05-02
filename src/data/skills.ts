@@ -13,7 +13,7 @@ export const skills = [
   { name: 'Postman', category: 'tools' },
   { name: 'Figma', category: 'tools' },
   { name: 'Reactotron', category: 'tools' },
-  { name: 'SCRCPY', category: 'tools' },
+  { name: 'Scrcpy', category: 'tools' },
   { name: 'xCode', category: 'tools' },
   { name: 'Android Studio', category: 'tools' },
   { name: 'VS Code', category: 'tools' },
