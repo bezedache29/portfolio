@@ -19,6 +19,12 @@ export interface DetailedProject {
 
 export function ProjectDetail({ project }: { project: DetailedProject }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [prevProject, setPrevProject] = useState(project)
+
+  if (project !== prevProject) {
+    setPrevProject(project)
+    setCurrentImageIndex(0)
+  }
 
   useEffect(() => {
     window.scrollTo({

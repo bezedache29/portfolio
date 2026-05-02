@@ -3,6 +3,8 @@ import { Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react'
 import emailjs from '@emailjs/browser'
 import { useEffect, useState } from 'react'
 
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
 export function ContactSection() {
   const [isSending, setIsSending] = useState(false)
   const [alert, setAlert] = useState<{
@@ -33,7 +35,7 @@ export function ContactSection() {
     const subject = (formData.get('subject') as string)?.trim()
     const message = (formData.get('message') as string)?.trim()
 
-    if (!name || !email || !subject || !message || message.length < 10) {
+    if (!name || !email || !emailRegex.test(email) || !subject || !message || message.length < 10) {
       setAlert({
         type: 'error',
         message: 'Veuillez remplir correctement tous les champs.',
@@ -57,7 +59,7 @@ export function ContactSection() {
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         form,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY }
       )
 
       setAlert({
@@ -75,7 +77,7 @@ export function ContactSection() {
       if (error && typeof error === 'object') {
         const err = error as { status?: number; text?: string }
 
-        if (err.status === 400 || err.text?.includes('429')) {
+        if (err.status === 429 || err.text?.includes('429')) {
           errorMessage = 'Trop de messages envoyés récemment. Réessaie dans quelques minutes.'
         }
       }

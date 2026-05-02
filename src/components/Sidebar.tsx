@@ -13,6 +13,8 @@ export function Sidebar() {
       {/* Bouton avec le chevron en jaune */}
       <button
         onClick={() => setIsExpanded(!isExpanded)}
+        aria-expanded={isExpanded}
+        aria-controls='sidebar-contacts'
         className='absolute top-0 right-0 p-4 text-yellow-500 hover:text-yellow-400 bg-linear-to-bl from-[#2b2b2c] to-transparent rounded-tr-4xl rounded-bl-3xl border-b border-l border-white/5 md:hidden transition-colors z-20'
         aria-label='Toggle contacts'
       >
@@ -55,6 +57,7 @@ export function Sidebar() {
 
       {/* Partie retractable pour les contacts */}
       <div
+        id='sidebar-contacts'
         className={`w-full overflow-hidden transition-all duration-500 ease-in-out md:max-h-125 md:opacity-100 ${
           isExpanded ? 'max-h-125 opacity-100 mt-6 md:mt-8' : 'max-h-0 opacity-0 mt-0 md:mt-8'
         }`}
