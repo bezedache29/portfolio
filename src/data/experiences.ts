@@ -1,0 +1,77 @@
+// --- PARCOURS (EXPERIENCES) ---
+export const experiences = [
+  {
+    title: 'Développeur Web & Mobile (Full Remote)',
+    company: 'Auto-entreprise - Plouider',
+    startDate: 'Juil. 2025',
+    endDate: 'Présent',
+    description: [
+      'Développeur web fullstack (vue.js react laravel)',
+      'Développeur mobile (react-native)',
+    ],
+  },
+  {
+    title: 'Développeur React-Native (Full Remote)',
+    company: 'V-Labs - Chartres',
+    link: 'https://www.v-labs.fr/',
+    startDate: 'Janv. 2023',
+    endDate: 'Juin 2025',
+    description: [
+      'Mise en place du pôle mobile React Native et des process de développement associés',
+      'Développement, maintenance et publication de plusieurs applications mobiles sur l’App Store et le Play Store',
+      'Communication quotidienne avec les équipes à distance (chefs de projet, graphistes, lead dev)',
+      'Intégration graphique à partir de maquettes Figma',
+      'Connexion aux API REST et GraphQL',
+      "Rédaction de tests unitaires et d'intégration pour assurer la qualité du code et sa maintenance",
+      'Gestion des erreurs et débogage à l’aide d’outils tels que Firebase Crashlytics ou Sentry',
+      'Veille technologique régulière afin de rester informé sur les dernières tendances du développement mobile',
+    ],
+  },
+  {
+    title: 'Développeur Web & Mobile (Full Remote)',
+    company: 'Auto-entreprise - Kerlouan',
+    startDate: 'Juil. 2022',
+    endDate: 'Janv. 2023',
+    description: [
+      'Développeur web fullstack (vue.js react laravel)',
+      'Développeur mobile (react-native)',
+    ],
+  },
+  {
+    title: 'Développeur React-Native (Full Remote)',
+    company: 'AGON - La Rochelle',
+    link: 'https://agon-league.com/',
+    startDate: 'Mars 2022',
+    endDate: 'Juin 2022',
+    description: [
+      "Amélioration et intégration de nouvelles fonctionnalités à l'applicationmobile déjà en place",
+      'Mise en place de Redux sur le projet',
+      'Utilisation de la nouvelle API interne',
+    ],
+  },
+  {
+    title: 'Développeur Web Fullstack (Full Remote)',
+    company: 'Persil & Romarin - Bordeaux',
+    link: 'https://macuisine.persiletromarin.fr/login',
+    startDate: 'Mai 2021',
+    endDate: 'Août 2021',
+    description: [
+      'Intégration de maquettes en HTML / SCSS / Bootstrap / JS / Twig',
+      'Aide en back-end en utilisant le framework PHP Symfony 5',
+    ],
+  },
+  {
+    title: 'Développeur Web Fullstack (Full Remote)',
+    company: 'Mon Correspondant Dentaire - Paris',
+    startDate: 'Juil. 2020',
+    endDate: 'Août 2020',
+    description: [
+      'Utilisation du framework bootstrap pour la partie front-end',
+      'Utilisation du PHP et MySql pour la partie back-end',
+      "Les plus : Création d'un moteur de recherche avec map interactive utilisant la librairie leaflet d'openstreetmap",
+      "Création d'un systeme de paiement par carte bancaire pour des abonnements avec la méthode Stripe",
+      "Création d'un espace membres avec possibilité, de s'ajouter en 'amis' et de s'échanger des informations",
+      'Construction de la base de donnée en utilisant la méthode MERISE',
+    ],
+  },
+]

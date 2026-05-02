@@ -1,0 +1,21 @@
+// --- COMPÉTENCES ---
+export const skills = [
+  { name: 'React', category: 'frontend' },
+  { name: 'React Native', category: 'mobile' },
+  { name: 'TypeScript', category: 'frontend' },
+  { name: 'Tailwind CSS', category: 'frontend' },
+  { name: 'Bootstrap', category: 'frontend' },
+  { name: 'Laravel', category: 'backend' },
+  { name: 'PHP', category: 'backend' },
+  { name: 'Docker / Sail', category: 'tools' },
+  { name: 'Git', category: 'tools' },
+  { name: 'GitHub', category: 'tools' },
+  { name: 'Postman', category: 'tools' },
+  { name: 'Figma', category: 'tools' },
+  { name: 'Reactotron', category: 'tools' },
+  { name: 'SCRCPY', category: 'tools' },
+  { name: 'xCode', category: 'tools' },
+  { name: 'Android Studio', category: 'tools' },
+  { name: 'VS Code', category: 'tools' },
+  { name: 'Webstorm', category: 'tools' },
+]
