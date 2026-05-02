@@ -9,7 +9,7 @@ export function Sidebar() {
   const [isExpanded, setIsExpanded] = useState(false)
 
   return (
-    <aside className='bg-[#1e1e1f] rounded-4xl p-6 md:p-8 border border-white/5 flex flex-col relative'>
+    <aside className='bg-[#1e1e1f] rounded-4xl p-4 md:p-8 border border-white/5 flex flex-col relative'>
       {/* Bouton avec le chevron en jaune */}
       <button
         onClick={() => setIsExpanded(!isExpanded)}

@@ -1,7 +1,7 @@
 // --- PARCOURS (EXPERIENCES) ---
 export const experiences = [
   {
-    title: 'Développeur Web & Mobile (Full Remote)',
+    title: 'Développeur Web & Mobile',
     company: 'Auto-entreprise - Plouider',
     startDate: 'Juil. 2025',
     endDate: 'Présent',
@@ -9,9 +9,10 @@ export const experiences = [
       'Développeur web fullstack (vue.js react laravel)',
       'Développeur mobile (react-native)',
     ],
+    isRemote: false,
   },
   {
-    title: 'Développeur React-Native (Full Remote)',
+    title: 'Développeur React-Native',
     company: 'V-Labs - Chartres',
     link: 'https://www.v-labs.fr/',
     startDate: 'Janv. 2023',
@@ -26,9 +27,10 @@ export const experiences = [
       'Gestion des erreurs et débogage à l’aide d’outils tels que Firebase Crashlytics ou Sentry',
       'Veille technologique régulière afin de rester informé sur les dernières tendances du développement mobile',
     ],
+    isRemote: true,
   },
   {
-    title: 'Développeur Web & Mobile (Full Remote)',
+    title: 'Développeur Web & Mobile',
     company: 'Auto-entreprise - Kerlouan',
     startDate: 'Juil. 2022',
     endDate: 'Janv. 2023',
@@ -36,9 +38,10 @@ export const experiences = [
       'Développeur web fullstack (vue.js react laravel)',
       'Développeur mobile (react-native)',
     ],
+    isRemote: false,
   },
   {
-    title: 'Développeur React-Native (Full Remote)',
+    title: 'Développeur React-Native',
     company: 'AGON - La Rochelle',
     link: 'https://agon-league.com/',
     startDate: 'Mars 2022',
@@ -48,9 +51,10 @@ export const experiences = [
       'Mise en place de Redux sur le projet',
       'Utilisation de la nouvelle API interne',
     ],
+    isRemote: true,
   },
   {
-    title: 'Développeur Web Fullstack (Full Remote)',
+    title: 'Développeur Web Fullstack',
     company: 'Persil & Romarin - Bordeaux',
     link: 'https://macuisine.persiletromarin.fr/login',
     startDate: 'Mai 2021',
@@ -59,9 +63,10 @@ export const experiences = [
       'Intégration de maquettes en HTML / SCSS / Bootstrap / JS / Twig',
       'Aide en back-end en utilisant le framework PHP Symfony 5',
     ],
+    isRemote: true,
   },
   {
-    title: 'Développeur Web Fullstack (Full Remote)',
+    title: 'Développeur Web Fullstack',
     company: 'Mon Correspondant Dentaire - Paris',
     startDate: 'Juil. 2020',
     endDate: 'Août 2020',
@@ -73,5 +78,6 @@ export const experiences = [
       "Création d'un espace membres avec possibilité, de s'ajouter en 'amis' et de s'échanger des informations",
       'Construction de la base de donnée en utilisant la méthode MERISE',
     ],
+    isRemote: true,
   },
 ]
