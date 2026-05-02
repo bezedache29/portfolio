@@ -358,7 +358,7 @@ export const projects = [
       "Application React Native permettant aux vététistes de rechercher et d'organiser leurs randonnées.",
     tags: ['React Native', 'Mobile', 'Leaflet', 'OpenWeather'],
     liveUrl: '',
-    githubUrl: '',
+    githubUrl: 'https://github.com/bezedache29/kiroulou-app',
     coverImage: kiroulouImageCover,
     imageFit: 'contain',
     images: [
@@ -410,7 +410,7 @@ export const projects = [
     shortDescription:
       "Exercice d'intégration 'Pixel Perfect' et responsive de l'interface d'Instagram en HTML et SCSS.",
     tags: ['Front', 'HTML5', 'CSS3', 'Intégration', 'Vanilla'],
-    liveUrl: '',
+    liveUrl: 'https://clone-insta.bezedache.com/',
     githubUrl: '',
     coverImage: instagramCloneImageCover,
     imageFit: 'cover',
