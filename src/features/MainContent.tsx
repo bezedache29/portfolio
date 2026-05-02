@@ -54,7 +54,7 @@ export function MainContent() {
           </ul>
         </nav>
 
-        <div className='p-8 md:p-6 md:pt-20 grow relative'>
+        <div className='p-4 md:p-6 md:pt-20 grow relative'>
           {/* Remplacement de mode="wait" par mode="popLayout" pour eviter le saut de scroll */}
           <AnimatePresence mode='popLayout'>
             <motion.div
@@ -79,16 +79,16 @@ export function MainContent() {
 
       {/* Navigation Mobile fixee en bas */}
       <nav
-        className='md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#2b2b2c] rounded-t-3xl border-t border-white/5 px-6 py-4 shadow-[0_-10px_30px_rgba(0,0,0,0.5)] backdrop-blur-md'
+        className='md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#2b2b2c] rounded-t-3xl border-t border-white/5 p-4 sm:py-4 shadow-[0_-10px_30px_rgba(0,0,0,0.5)] backdrop-blur-md'
         role='tablist'
         aria-label='Sections du portfolio'
       >
-        <ul className='flex items-center justify-between text-sm font-medium overflow-x-auto gap-4 hide-scrollbar'>
+        <ul className='flex items-center justify-between text-sm font-medium overflow-x-auto gap-1 sm:gap-4 hide-scrollbar'>
           {navItems.map((item) => (
-            <li key={item.id} className='shrink-0'>
+            <li key={item.id} className='flex-1 text-center'>
               <button
                 onClick={() => setActiveTab(item.id)}
-                className={`transition-colors duration-300 px-2 py-1 ${
+                className={`w-full px-1 py-2 text-[11px] xs:text-xs sm:text-sm md:text-base font-medium rounded-lg transition-colors cursor-pointer ${
                   activeTab === item.id ? 'text-yellow-500' : 'text-white/70 hover:text-white/90'
                 }`}
               >

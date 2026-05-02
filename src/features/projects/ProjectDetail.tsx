@@ -102,17 +102,17 @@ export function ProjectDetail({ project }: { project: DetailedProject }) {
                   type='button'
                   aria-label='Image précédente'
                   onClick={prevImage}
-                  className='absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/50 hover:bg-yellow-500 text-white hover:text-black rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-sm'
+                  className='absolute left-2 md:left-4 top-1/2 -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 bg-black/50 hover:bg-yellow-500 text-white hover:text-black rounded-full flex items-center justify-center opacity-100 md:opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-sm'
                 >
-                  <ChevronLeft size={24} />
+                  <ChevronLeft size={20} className='md:w-6 md:h-6' />
                 </button>
                 <button
                   type='button'
                   aria-label='Image suivante'
                   onClick={nextImage}
-                  className='absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/50 hover:bg-yellow-500 text-white hover:text-black rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-sm'
+                  className='absolute right-2 md:right-4 top-1/2 -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 bg-black/50 hover:bg-yellow-500 text-white hover:text-black rounded-full flex items-center justify-center opacity-100 md:opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-sm'
                 >
-                  <ChevronRight size={24} />
+                  <ChevronRight size={20} className='md:w-6 md:h-6' />
                 </button>
               </>
             )}

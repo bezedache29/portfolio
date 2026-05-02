@@ -41,12 +41,12 @@ export function ProjectsSection() {
     <div className='animate-in fade-in duration-500'>
       <SectionTitle>Portfolio</SectionTitle>
 
-      <div className='flex flex-wrap gap-3 mb-10'>
+      <div className='flex flex-wrap gap-2 md:gap-3 mb-8 md:mb-10'>
         {filters.map((filter) => (
           <button
             key={filter}
             onClick={() => setActiveFilter(filter)}
-            className={`px-5 py-2 rounded-full text-sm font-medium transition-colors duration-300 cursor-pointer ${
+            className={`px-2.5 py-1.5 text-[13px] md:px-5 md:py-2 md:text-sm rounded-full font-medium transition-colors duration-300 cursor-pointer ${
               activeFilter === filter
                 ? 'bg-yellow-500 text-gray-900'
                 : 'bg-white/5 text-white/60 hover:bg-white/10 hover:text-white'
@@ -57,7 +57,7 @@ export function ProjectsSection() {
         ))}
       </div>
 
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6'>
         {filteredProjects.map((project, index) => (
           <motion.article
             key={index}
@@ -75,8 +75,8 @@ export function ProjectsSection() {
             transition={{ duration: 0.4, delay: index * 0.15, type: 'spring', stiffness: 100 }}
             className='group bg-[#2b2b2c] border border-white/5 rounded-2xl overflow-hidden shadow-sm flex flex-col h-full cursor-pointer hover:border-yellow-500/30 transition-colors'
           >
-            {/* Zone de l'image (plus besoin de cursor-pointer ou onClick specifique) */}
-            <div className='h-48 bg-[#1e1e1f] relative overflow-hidden flex items-center justify-center border-b border-white/5'>
+            {/* On réduit la hauteur de l'image sur mobile (h-40) et on remet h-48 sur PC */}
+            <div className='h-40 md:h-48 bg-[#1e1e1f] relative overflow-hidden flex items-center justify-center border-b border-white/5'>
               {project.coverImage ? (
                 <img
                   src={project.coverImage}
@@ -92,36 +92,36 @@ export function ProjectsSection() {
               )}
             </div>
 
-            <div className='p-6 flex flex-col grow'>
-              {/* Le titre n'a plus besoin du onClick non plus */}
-              <h3 className='text-xl font-bold text-white mb-3 group-hover:text-yellow-500 transition-colors w-fit'>
+            {/* On réduit le padding interne sur mobile (p-4) et on remet p-6 sur PC */}
+            <div className='p-4 md:p-6 flex flex-col grow'>
+              <h3 className='text-lg md:text-xl font-bold text-white mb-2 md:mb-3 group-hover:text-yellow-500 transition-colors w-fit'>
                 {project.title}
               </h3>
 
-              <p className='text-white/60 text-sm leading-relaxed mb-6 grow'>
+              <p className='text-white/60 text-sm leading-relaxed mb-4 md:mb-6 grow'>
                 {project.shortDescription}
               </p>
 
-              <div className='flex flex-wrap gap-2 mb-6'>
+              <div className='flex flex-wrap gap-1.5 md:gap-2 mb-4 md:mb-6'>
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className='text-[11px] font-medium px-2.5 py-1 bg-[#1e1e1f] text-white/70 rounded-md border border-white/5'
+                    className='text-[10px] md:text-[11px] font-medium px-2 py-1 md:px-2.5 bg-[#1e1e1f] text-white/70 rounded-md border border-white/5'
                   >
                     {tag}
                   </span>
                 ))}
               </div>
 
-              <div className='flex gap-3 mt-auto pt-4 border-t border-white/5'>
+              {/* Ajustement du padding supérieur pour les liens Github/Live */}
+              <div className='flex gap-3 mt-auto pt-3 md:pt-4 border-t border-white/5'>
                 {project.githubUrl && (
                   <a
                     href={project.githubUrl}
                     target='_blank'
                     rel='noreferrer'
-                    // e.stopPropagation() empeche le clic d'ouvrir la vue detaillee
                     onClick={(e) => e.stopPropagation()}
-                    className='flex items-center justify-center p-2.5 rounded-xl bg-[#1e1e1f] text-white/50 hover:text-white hover:bg-white/10 transition-colors border border-white/5 cursor-pointer relative z-10'
+                    className='flex items-center justify-center p-2 md:p-2.5 rounded-xl bg-[#1e1e1f] text-white/50 hover:text-white hover:bg-white/10 transition-colors border border-white/5 cursor-pointer relative z-10'
                   >
                     <FaGithub size={18} />
                   </a>
@@ -131,9 +131,8 @@ export function ProjectsSection() {
                     href={project.liveUrl}
                     target='_blank'
                     rel='noreferrer'
-                    // e.stopPropagation() empeche le clic d'ouvrir la vue detaillee
                     onClick={(e) => e.stopPropagation()}
-                    className='flex items-center justify-center p-2.5 rounded-xl bg-[#1e1e1f] text-white/50 hover:text-white hover:bg-white/10 transition-colors border border-white/5 cursor-pointer relative z-10'
+                    className='flex items-center justify-center p-2 md:p-2.5 rounded-xl bg-[#1e1e1f] text-white/50 hover:text-white hover:bg-white/10 transition-colors border border-white/5 cursor-pointer relative z-10'
                   >
                     <ExternalLink size={18} />
                   </a>

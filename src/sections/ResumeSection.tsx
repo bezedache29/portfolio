@@ -10,46 +10,64 @@ export function ResumeSection() {
       <SectionTitle>Compétences</SectionTitle>
 
       {/* --- EXPERIENCES --- */}
-      <div className='mb-12'>
-        <div className='flex items-center gap-4 mb-6'>
+      <div className='mb-14'>
+        <div className='flex items-center gap-4 mb-8'>
           <div className='w-12 h-12 bg-[#2b2b2c] rounded-xl flex items-center justify-center text-yellow-500 border border-white/5 shadow-sm'>
             <Briefcase size={24} strokeWidth={1.5} />
           </div>
           <h3 className='text-2xl font-bold text-white'>Expérience</h3>
         </div>
 
-        <div className='ml-6 border-l border-white/10 pl-8 space-y-10 relative'>
+        <div className='ml-4 md:ml-6 border-l border-white/10 pl-6 md:pl-8 space-y-12 relative'>
           {experiences.map((exp, index) => (
             <div key={index} className='relative group'>
               <span
-                className={`absolute -left-10.25 top-1.5 w-4 h-4 rounded-full border-4 border-[#1e1e1f] transition-colors ${
+                className={`absolute -left-7.25 md:-left-9.25 top-1.5 w-4 h-4 rounded-full border-4 border-[#1e1e1f] transition-colors ${
                   index === 0
                     ? 'bg-yellow-500 shadow-[0_0_0_4px_rgba(234,179,8,0.1)]'
                     : 'bg-white/20 group-hover:bg-yellow-500/50'
                 }`}
               ></span>
 
-              <h4 className='text-[17px] font-bold text-white mb-1'>{exp.title}</h4>
-              <span className='text-yellow-500 text-sm font-medium mb-3 flex items-center gap-2'>
-                {exp.startDate} — {exp.endDate}
-                {exp.link ? (
-                  <a
-                    href={exp.link}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='text-white/70 hover:text-yellow-500 transition-colors text-xs px-2.5 py-0.5 bg-[#2b2b2c] rounded border border-white/10 cursor-pointer'
-                  >
-                    {exp.company}
-                  </a>
-                ) : (
-                  <span className='text-white/70 text-xs px-2.5 py-0.5 bg-[#2b2b2c] rounded border border-white/10'>
-                    {exp.company}
+              {/* Titre du poste épuré */}
+              <div className='flex items-center flex-wrap gap-3 mb-2'>
+                <h4 className='text-base md:text-lg font-semibold text-white leading-snug'>
+                  {exp.title}
+                </h4>
+
+                {/* Le badge Full Remote stylisé */}
+                {exp.isRemote && (
+                  <span className='px-2 py-0.5 bg-gray-600 border border-gray-500/20 rounded text-[11px] font-medium tracking-wider'>
+                    Full Remote
                   </span>
                 )}
-              </span>
+              </div>
 
-              {/* Affichage conditionnel : Liste à puces ou texte simple */}
-              <ul className='list-disc pl-4 space-y-2 marker:text-yellow-500 text-white/60 leading-relaxed text-[14px]'>
+              <div className='flex flex-col gap-1.5 mb-4'>
+                <span className='text-yellow-500 text-sm md:text-[15px] font-medium'>
+                  {exp.startDate} — {exp.endDate}
+                </span>
+
+                {/* Conteneur flexible pour l'entreprise ET le badge */}
+                <div className='flex items-center flex-wrap gap-2.5'>
+                  {exp.link ? (
+                    <a
+                      href={exp.link}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='text-white/60 hover:text-yellow-500 transition-colors text-sm md:text-[15px] italic cursor-pointer'
+                    >
+                      {exp.company}
+                    </a>
+                  ) : (
+                    <span className='text-white/60 text-sm md:text-[15px] italic'>
+                      {exp.company}
+                    </span>
+                  )}
+                </div>
+              </div>
+
+              <ul className='list-disc pl-4 space-y-2.5 marker:text-yellow-500 text-white/70 leading-relaxed text-sm md:text-[15px]'>
                 {Array.isArray(exp.description) ? (
                   exp.description.map((item, i) => <li key={i}>{item}</li>)
                 ) : (
@@ -63,28 +81,30 @@ export function ResumeSection() {
 
       {/* --- FORMATIONS --- */}
       <div className='mb-12'>
-        <div className='flex items-center gap-4 mb-6'>
+        <div className='flex items-center gap-4 mb-8'>
           <div className='w-12 h-12 bg-[#2b2b2c] rounded-xl flex items-center justify-center text-yellow-500 border border-white/5 shadow-sm'>
             <BookOpen size={24} strokeWidth={1.5} />
           </div>
           <h3 className='text-2xl font-bold text-white'>Formation</h3>
         </div>
 
-        <div className='ml-6 border-l border-white/10 pl-8 space-y-10 relative'>
+        <div className='ml-4 md:ml-6 border-l border-white/10 pl-6 md:pl-8 space-y-12 relative'>
           {education.map((edu, index) => (
             <div key={index} className='relative group'>
-              <span className='absolute -left-10.25 top-1.5 w-4 h-4 bg-white/20 group-hover:bg-yellow-500/50 transition-colors rounded-full border-4 border-[#1e1e1f]'></span>
+              <span className='absolute -left-7.25 md:-left-9.25 top-1.5 w-4 h-4 bg-white/20 group-hover:bg-yellow-500/50 transition-colors rounded-full border-4 border-[#1e1e1f]'></span>
 
-              <h4 className='text-[17px] font-bold text-white mb-1'>{edu.title}</h4>
-              <span className='text-yellow-500 text-sm font-medium mb-3 flex items-center gap-2'>
-                {edu.startDate} — {edu.endDate}
-                <span className='text-white/70 text-xs px-2.5 py-0.5 bg-[#2b2b2c] rounded border border-white/10'>
-                  {edu.school}
+              <h4 className='text-base md:text-lg font-semibold text-white mb-2 leading-snug'>
+                {edu.title}
+              </h4>
+
+              <div className='flex flex-col gap-1 mb-4'>
+                <span className='text-yellow-500 text-sm md:text-[15px] font-medium'>
+                  {edu.startDate} — {edu.endDate}
                 </span>
-              </span>
+                <span className='text-white/60 text-sm md:text-[15px] italic'>{edu.school}</span>
+              </div>
 
-              {/* Affichage conditionnel : Liste à puces ou texte simple */}
-              <ul className='list-disc pl-4 space-y-2 marker:text-yellow-500 text-white/60 leading-relaxed text-[14px]'>
+              <ul className='list-disc pl-4 space-y-2.5 marker:text-yellow-500 text-white/70 leading-relaxed text-sm md:text-[15px]'>
                 {Array.isArray(edu.description) ? (
                   edu.description.map((item, i) => <li key={i}>{item}</li>)
                 ) : (
