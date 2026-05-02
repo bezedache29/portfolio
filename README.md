@@ -1,73 +1,38 @@
-# React + TypeScript + Vite
+# Portfolio - Christophe Salou 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bienvenue sur le repository de mon portfolio personnel. Il s'agit d'une application Single Page Application (SPA) développée pour présenter mon profil, mes compétences (Web & Mobile) et mes projets.
 
-Currently, two official plugins are available:
+## 🛠️ Stack Technique
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Ce projet a été construit avec les technologies modernes suivantes :
 
-## React Compiler
+- **Framework :** React 18
+- **Langage :** TypeScript
+- **Build Tool :** Vite
+- **Styling :** Tailwind CSS
+- **Icônes :** Lucide React & React Icons
+- **Mailing :** EmailJS (pour le formulaire de contact sans backend)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Fonctionnalités Principales
 
-## Expanding the ESLint configuration
+- **Architecture Modulaire :** Navigation fluide entre les 4 sections principales (À propos, Compétences, Projets, Contact).
+- **Système de Filtrage :** Tri dynamique des projets par catégories métiers (Front, Back, Fullstack, Mobile).
+- **Détail des Projets :** Vue détaillée avec carrousel d'images interactif, description approfondie et liste des technologies utilisées.
+- **Contact Sécurisé :** Formulaire de contact fonctionnel avec retours UX (alertes inline, désactivation au chargement) et protection anti-bot (Honeypot invisible).
+- **Responsive Design :** Interface (UI/UX) conçue pour s'adapter parfaitement aux écrans mobiles, tablettes et ordinateurs de bureau.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Installation et Lancement en local
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Si vous souhaitez cloner et faire tourner ce projet sur votre machine locale :
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1.  **Cloner le dépôt :**
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+    ```bash
+    git clone [https://github.com/bezedache29/profolio.git](https://github.com/bezedache29/portfolio.git)
+    cd portfolio
+    ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+2.  **Installer les dépendances :**
+    ```bash
+    npm install --legacy-peer-deps
+    ```
