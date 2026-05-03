@@ -5,6 +5,16 @@ import SectionTitle from '@/components/SectionTitle'
 import cvPdf from '@/assets/CV_CS_2026.pdf'
 
 export function ResumeSection() {
+  const handleDownloadCV = () => {
+    if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+      window.gtag('event', 'file_download', {
+        file_name: 'CV_CS_2026.pdf',
+        file_extension: 'pdf',
+        link_text: 'Télécharger mon CV',
+      })
+    }
+  }
+
   return (
     <div className='animate-in fade-in duration-500'>
       <SectionTitle>Compétences</SectionTitle>
@@ -121,6 +131,7 @@ export function ResumeSection() {
         <a
           href={cvPdf}
           download='CV_CS_2026.pdf'
+          onClick={handleDownloadCV}
           className='flex items-center gap-3 bg-[#2b2b2c] hover:bg-yellow-500 text-yellow-500 hover:text-[#1e1e1f] font-medium px-6 py-3.5 rounded-xl border border-white/5 hover:border-yellow-500 transition-all duration-300 group cursor-pointer'
         >
           <FileDown

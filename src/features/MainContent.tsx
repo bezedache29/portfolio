@@ -5,6 +5,16 @@ import { ProjectsSection } from '@/sections/ProjectsSection'
 import { ResumeSection } from '@/sections/ResumeSection'
 import { ContactSection } from '@/sections/ContactSection'
 
+declare global {
+  interface Window {
+    gtag: (
+      command: 'config' | 'event' | 'js' | 'set',
+      action: string | Date,
+      params?: Record<string, unknown>
+    ) => void
+  }
+}
+
 type Tab = 'about' | 'resume' | 'portfolio' | 'contact'
 
 export function MainContent() {
@@ -22,6 +32,13 @@ export function MainContent() {
       top: 0,
       behavior: 'smooth',
     })
+
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'page_view', {
+        page_path: `/${activeTab}`,
+        page_title: activeTab,
+      })
+    }
   }, [activeTab])
 
   return (
