@@ -3,7 +3,7 @@ import { Mail, MapPin, ChevronDown } from 'lucide-react'
 import { useState } from 'react'
 import { FaGithub, FaLinkedin, FaXTwitter, FaStackOverflow } from 'react-icons/fa6'
 
-import avatarImg from '@/assets/avatar.png'
+import avatarImg from '@/assets/avatar.webp'
 
 export function Sidebar() {
   const [isExpanded, setIsExpanded] = useState(false)

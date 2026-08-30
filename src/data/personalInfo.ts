@@ -1,3 +1,9 @@
+import { decodeText } from '@/utils/obfuscate'
+
+// Email encodé en codes caractères pour éviter le scraping par les bots
+// (le mailto et l'affichage restent identiques, seule la chaîne littérale disparaît du bundle)
+const emailCodes = [98, 101, 122, 101, 100, 97, 99, 104, 101, 50, 57, 64, 103, 109, 97, 105, 108, 46, 99, 111, 109]
+
 export const personalInfo = {
   name: 'Christophe',
   lastName: 'Salou',
@@ -5,7 +11,7 @@ export const personalInfo = {
   description:
     'Passionné par le développement web et mobile, je crée des applications modernes avec React, React Native et Laravel.',
   location: '29890 Kerlouan, France',
-  email: 'bezedache29@gmail.com',
+  email: decodeText(emailCodes),
   github: 'https://github.com/bezedache29',
   linkedin: 'https://linkedin.com/in/christophe-salou',
   x: 'https://x.com/ripley696',

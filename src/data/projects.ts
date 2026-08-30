@@ -1,78 +1,172 @@
-import leasyImage1 from '@/assets/projects/leasy/1.png'
-import leasyImage2 from '@/assets/projects/leasy/2.png'
-import leasyImage3 from '@/assets/projects/leasy/3.png'
-import leasyImage4 from '@/assets/projects/leasy/4.png'
-import leasyImage5 from '@/assets/projects/leasy/5.png'
-import leasyImage6 from '@/assets/projects/leasy/6.png'
-import leasyImage7 from '@/assets/projects/leasy/7.png'
-import leasyImage8 from '@/assets/projects/leasy/8.png'
-import leasyImageCover from '@/assets/projects/leasy/cover.jpg'
-import portfolioEeImageCover from '@/assets/projects/portfolio-ee/cover.png'
-import portfolioEeImage1 from '@/assets/projects/portfolio-ee/1.png'
-import portfolioEeImage2 from '@/assets/projects/portfolio-ee/2.png'
-import portfolioEeImage3 from '@/assets/projects/portfolio-ee/3.png'
-import portfolioEeImage4 from '@/assets/projects/portfolio-ee/4.png'
-import portfolioEeImage5 from '@/assets/projects/portfolio-ee/5.png'
-import portfolioEeImage6 from '@/assets/projects/portfolio-ee/6.png'
-import portfolioEeImage7 from '@/assets/projects/portfolio-ee/7.png'
-import portfolioEeImage8 from '@/assets/projects/portfolio-ee/8.png'
-import portfolioEeImage9 from '@/assets/projects/portfolio-ee/9.png'
-import portfolioEeImage10 from '@/assets/projects/portfolio-ee/10.png'
-import portfolioEeImage11 from '@/assets/projects/portfolio-ee/11.png'
-import portfolioEeImage12 from '@/assets/projects/portfolio-ee/12.png'
-import portfolioEeImage13 from '@/assets/projects/portfolio-ee/13.png'
-import circuitGpxImageCover from '@/assets/projects/cdlvtt-gpx/cover.png'
-import circuitGpxImage1 from '@/assets/projects/cdlvtt-gpx/1.png'
-import circuitGpxImage2 from '@/assets/projects/cdlvtt-gpx/2.png'
-import circuitGpxImage3 from '@/assets/projects/cdlvtt-gpx/3.png'
-import circuitGpxImage4 from '@/assets/projects/cdlvtt-gpx/4.png'
-import circuitGpxImage5 from '@/assets/projects/cdlvtt-gpx/5.png'
-import circuitGpxImage6 from '@/assets/projects/cdlvtt-gpx/6.png'
-import circuitGpxImage7 from '@/assets/projects/cdlvtt-gpx/7.png'
-import circuitGpxImage8 from '@/assets/projects/cdlvtt-gpx/8.png'
-import circuitGpxImage9 from '@/assets/projects/cdlvtt-gpx/9.png'
-import zfImageCover from '@/assets/projects/zaint-fregantables/cover.png'
-import zfImage1 from '@/assets/projects/zaint-fregantables/1.png'
-import zfImage2 from '@/assets/projects/zaint-fregantables/2.png'
-import zfImage3 from '@/assets/projects/zaint-fregantables/3.png'
-import zfImage4 from '@/assets/projects/zaint-fregantables/4.png'
-import zfImage5 from '@/assets/projects/zaint-fregantables/5.png'
-import zfImage6 from '@/assets/projects/zaint-fregantables/6.png'
-import zfImage7 from '@/assets/projects/zaint-fregantables/7.png'
-import zfMobileImageCover from '@/assets/projects/zaint-fregantables-mobile/cover.png'
-import zfMobileImage1 from '@/assets/projects/zaint-fregantables-mobile/1.jpg'
-import zfMobileImage2 from '@/assets/projects/zaint-fregantables-mobile/2.jpg'
-import zfMobileImage3 from '@/assets/projects/zaint-fregantables-mobile/3.jpg'
-import zfMobileImage4 from '@/assets/projects/zaint-fregantables-mobile/4.jpg'
-import kiroulouSwaggerImageCover from '@/assets/projects/kiroulou-api/cover.png'
-import kiroulouSwaggerImage1 from '@/assets/projects/kiroulou-api/1.png'
-import kiroulouSwaggerImage2 from '@/assets/projects/kiroulou-api/2.png'
-import kiroulouSwaggerImage3 from '@/assets/projects/kiroulou-api/3.png'
-import kiroulouSwaggerImage4 from '@/assets/projects/kiroulou-api/4.png'
-import kiroulouImageCover from '@/assets/projects/kiroulou-app/cover.png'
-import kiroulouImage1 from '@/assets/projects/kiroulou-app/1.jpg'
-import kiroulouImage2 from '@/assets/projects/kiroulou-app/2.jpg'
-import kiroulouImage3 from '@/assets/projects/kiroulou-app/3.jpg'
-import kiroulouImage4 from '@/assets/projects/kiroulou-app/4.jpg'
-import kiroulouImage5 from '@/assets/projects/kiroulou-app/5.jpg'
-import kiroulouImage6 from '@/assets/projects/kiroulou-app/6.jpg'
-import kiroulouImage7 from '@/assets/projects/kiroulou-app/7.jpg'
-import kiroulouImage8 from '@/assets/projects/kiroulou-app/8.jpg'
-import kiroulouImage9 from '@/assets/projects/kiroulou-app/9.jpg'
-import kiroulouImage10 from '@/assets/projects/kiroulou-app/10.jpg'
-import kiroulouImage11 from '@/assets/projects/kiroulou-app/11.jpg'
-import kiroulouImage12 from '@/assets/projects/kiroulou-app/12.jpg'
-import kiroulouImage13 from '@/assets/projects/kiroulou-app/13.jpg'
-import kiroulouImage14 from '@/assets/projects/kiroulou-app/14.png'
-import kiroulouImage15 from '@/assets/projects/kiroulou-app/15.png'
-import kiroulouImage16 from '@/assets/projects/kiroulou-app/16.png'
-import kiroulouImage17 from '@/assets/projects/kiroulou-app/17.png'
-import instagramCloneImageCover from '@/assets/projects/instagram/cover.png'
-import instagramCloneImage1 from '@/assets/projects/instagram/1.png'
-import instagramCloneImage2 from '@/assets/projects/instagram/2.png'
+import leasyImage1 from '@/assets/projects/leasy/1.webp'
+import leasyImage2 from '@/assets/projects/leasy/2.webp'
+import leasyImage3 from '@/assets/projects/leasy/3.webp'
+import leasyImage4 from '@/assets/projects/leasy/4.webp'
+import leasyImage5 from '@/assets/projects/leasy/5.webp'
+import leasyImage6 from '@/assets/projects/leasy/6.webp'
+import leasyImage7 from '@/assets/projects/leasy/7.webp'
+import leasyImage8 from '@/assets/projects/leasy/8.webp'
+import leasyImageCover from '@/assets/projects/leasy/cover.webp'
+import portfolioEeImageCover from '@/assets/projects/portfolio-ee/cover.webp'
+import portfolioEeImage1 from '@/assets/projects/portfolio-ee/1.webp'
+import portfolioEeImage2 from '@/assets/projects/portfolio-ee/2.webp'
+import portfolioEeImage3 from '@/assets/projects/portfolio-ee/3.webp'
+import portfolioEeImage4 from '@/assets/projects/portfolio-ee/4.webp'
+import portfolioEeImage5 from '@/assets/projects/portfolio-ee/5.webp'
+import portfolioEeImage6 from '@/assets/projects/portfolio-ee/6.webp'
+import portfolioEeImage7 from '@/assets/projects/portfolio-ee/7.webp'
+import portfolioEeImage8 from '@/assets/projects/portfolio-ee/8.webp'
+import portfolioEeImage9 from '@/assets/projects/portfolio-ee/9.webp'
+import portfolioEeImage10 from '@/assets/projects/portfolio-ee/10.webp'
+import portfolioEeImage11 from '@/assets/projects/portfolio-ee/11.webp'
+import portfolioEeImage12 from '@/assets/projects/portfolio-ee/12.webp'
+import portfolioEeImage13 from '@/assets/projects/portfolio-ee/13.webp'
+import circuitGpxImageCover from '@/assets/projects/cdlvtt-gpx/cover.webp'
+import circuitGpxImage1 from '@/assets/projects/cdlvtt-gpx/1.webp'
+import circuitGpxImage2 from '@/assets/projects/cdlvtt-gpx/2.webp'
+import circuitGpxImage3 from '@/assets/projects/cdlvtt-gpx/3.webp'
+import circuitGpxImage4 from '@/assets/projects/cdlvtt-gpx/4.webp'
+import circuitGpxImage5 from '@/assets/projects/cdlvtt-gpx/5.webp'
+import circuitGpxImage6 from '@/assets/projects/cdlvtt-gpx/6.webp'
+import circuitGpxImage7 from '@/assets/projects/cdlvtt-gpx/7.webp'
+import circuitGpxImage8 from '@/assets/projects/cdlvtt-gpx/8.webp'
+import circuitGpxImage9 from '@/assets/projects/cdlvtt-gpx/9.webp'
+import zfImageCover from '@/assets/projects/zaint-fregantables/cover.webp'
+import zfImage1 from '@/assets/projects/zaint-fregantables/1.webp'
+import zfImage2 from '@/assets/projects/zaint-fregantables/2.webp'
+import zfImage3 from '@/assets/projects/zaint-fregantables/3.webp'
+import zfImage4 from '@/assets/projects/zaint-fregantables/4.webp'
+import zfImage5 from '@/assets/projects/zaint-fregantables/5.webp'
+import zfImage6 from '@/assets/projects/zaint-fregantables/6.webp'
+import zfImage7 from '@/assets/projects/zaint-fregantables/7.webp'
+import zfMobileImageCover from '@/assets/projects/zaint-fregantables-mobile/cover.webp'
+import zfMobileImage1 from '@/assets/projects/zaint-fregantables-mobile/1.webp'
+import zfMobileImage2 from '@/assets/projects/zaint-fregantables-mobile/2.webp'
+import zfMobileImage3 from '@/assets/projects/zaint-fregantables-mobile/3.webp'
+import zfMobileImage4 from '@/assets/projects/zaint-fregantables-mobile/4.webp'
+import kiroulouSwaggerImageCover from '@/assets/projects/kiroulou-api/cover.webp'
+import kiroulouSwaggerImage1 from '@/assets/projects/kiroulou-api/1.webp'
+import kiroulouSwaggerImage2 from '@/assets/projects/kiroulou-api/2.webp'
+import kiroulouSwaggerImage3 from '@/assets/projects/kiroulou-api/3.webp'
+import kiroulouSwaggerImage4 from '@/assets/projects/kiroulou-api/4.webp'
+import kiroulouImageCover from '@/assets/projects/kiroulou-app/cover.webp'
+import kiroulouImage1 from '@/assets/projects/kiroulou-app/1.webp'
+import kiroulouImage2 from '@/assets/projects/kiroulou-app/2.webp'
+import kiroulouImage3 from '@/assets/projects/kiroulou-app/3.webp'
+import kiroulouImage4 from '@/assets/projects/kiroulou-app/4.webp'
+import kiroulouImage5 from '@/assets/projects/kiroulou-app/5.webp'
+import kiroulouImage6 from '@/assets/projects/kiroulou-app/6.webp'
+import kiroulouImage7 from '@/assets/projects/kiroulou-app/7.webp'
+import kiroulouImage8 from '@/assets/projects/kiroulou-app/8.webp'
+import kiroulouImage9 from '@/assets/projects/kiroulou-app/9.webp'
+import kiroulouImage10 from '@/assets/projects/kiroulou-app/10.webp'
+import kiroulouImage11 from '@/assets/projects/kiroulou-app/11.webp'
+import kiroulouImage12 from '@/assets/projects/kiroulou-app/12.webp'
+import kiroulouImage13 from '@/assets/projects/kiroulou-app/13.webp'
+import kiroulouImage14 from '@/assets/projects/kiroulou-app/14.webp'
+import kiroulouImage15 from '@/assets/projects/kiroulou-app/15.webp'
+import kiroulouImage16 from '@/assets/projects/kiroulou-app/16.webp'
+import kiroulouImage17 from '@/assets/projects/kiroulou-app/17.webp'
+import instagramCloneImageCover from '@/assets/projects/instagram/cover.webp'
+import instagramCloneImage1 from '@/assets/projects/instagram/1.webp'
+import instagramCloneImage2 from '@/assets/projects/instagram/2.webp'
+import alizApiImageCover from '@/assets/projects/aliz-api/cover.webp'
+import alizApiImage1 from '@/assets/projects/aliz-api/1.webp'
+import alizApiImage2 from '@/assets/projects/aliz-api/2.webp'
+import alizAppImageCover from '@/assets/projects/aliz-app/cover.webp'
+import alizAppImage1 from '@/assets/projects/aliz-app/1.webp'
+import alizAppImage2 from '@/assets/projects/aliz-app/2.webp'
+import alizAppImage3 from '@/assets/projects/aliz-app/3.webp'
+import alizAppImage4 from '@/assets/projects/aliz-app/4.webp'
+import alizAppImage5 from '@/assets/projects/aliz-app/5.webp'
 
 // --- PROJETS ---
 export const projects = [
+  {
+    title: 'Aliz - API Backend',
+    shortDescription:
+      "API backend Laravel pour l'application Aliz : proxy sécurisé vers l'IA (ChatGPT), authentification OAuth2 Strava, calcul nutritionnel et agrégation de bases alimentaires (Ciqual, Open Food Facts, Aprifel).",
+    tags: ['Back', 'Laravel', 'PHP', 'API REST', 'IA', 'Sanctum'],
+    liveUrl: 'https://aliz-api.bezedache.com/docs/index.html',
+    githubUrl: 'https://github.com/bezedache29/aliz-api',
+    coverImage: alizApiImageCover,
+    images: [alizApiImage1, alizApiImage2],
+    description:
+      "L'API backend d'Aliz, développée en Laravel, constitue le cerveau du projet : elle centralise le calcul nutritionnel, la génération de recettes par IA et l'agrégation des sources de données externes consommées par l'application mobile, actuellement en développement.\n\nElle fait office de proxy sécurisé vers l'API OpenAI (ChatGPT) pour la génération de recettes, sans jamais exposer la clé côté client. L'authentification OAuth2 avec Strava (via Socialite) permet de récupérer l'activité physique de l'utilisateur (Garmin) et d'ajuster dynamiquement son objectif calorique, avec un plancher de sécurité à 1 500 kcal/jour. Une base d'aliments hybride croise les données Ciqual (ANSES), Open Food Facts et Aprifel pour couvrir un maximum de produits, complétée par la synchronisation des pesées d'une balance connectée Renpho. L'ensemble des endpoints (profil, frigo/stock, planning, journal, poids) est testé avec Pest et formaté avec Pint pour garantir un code backend propre et fiable.",
+    techStack: [
+      { label: 'Backend', value: 'PHP, Laravel, Sanctum, Socialite (OAuth2 Strava)' },
+      { label: 'Intelligence Artificielle', value: 'Proxy sécurisé vers ChatGPT (OpenAI) pour la génération de recettes' },
+      { label: 'Sources de données', value: 'Strava, Renpho, Open Food Facts, Ciqual (ANSES), Aprifel' },
+      { label: 'Qualité', value: 'Pest (tests), Laravel Pint (code style)' },
+    ],
+    features: [
+      {
+        category: 'Calcul Nutritionnel Intelligent',
+        points: [
+          "Calcul dynamique du TDEE à partir du profil utilisateur, avec un déficit calorique fixe choisi à l'onboarding (toujours en déficit, jamais en maintien).",
+          "Ajustement automatique de l'objectif calorique selon les calories brûlées récupérées en temps réel depuis Strava.",
+        ],
+      },
+      {
+        category: 'Intelligence Artificielle & Recettes',
+        points: [
+          "Proxy sécurisé vers l'API OpenAI (ChatGPT) pour générer des recettes respectant les macros du jour et les aliments disponibles.",
+          'Endpoints dédiés au frigo virtuel, au planning hebdomadaire et au journal alimentaire.',
+        ],
+      },
+      {
+        category: 'Intégrations Externes',
+        points: [
+          'Authentification OAuth2 avec Strava (Socialite) pour la récupération des activités physiques.',
+          'Agrégation de bases alimentaires externes (Ciqual ANSES, Open Food Facts, Aprifel) et synchronisation des pesées Renpho.',
+        ],
+      },
+    ],
+  },
+  {
+    title: 'Aliz - Application Mobile',
+    shortDescription:
+      'Application mobile React Native de nutrition intelligente : frigo virtuel, génération de recettes par IA, planning et suivi de poids, connectée à Strava et Renpho.',
+    tags: ['React Native', 'Mobile', 'Expo', 'IA'],
+    liveUrl: '',
+    githubUrl: 'https://github.com/bezedache29/aliz',
+    coverImage: alizAppImageCover,
+    imageFit: 'contain',
+    images: [alizAppImage1, alizAppImage2, alizAppImage3, alizAppImage4, alizAppImage5],
+    imagesFit: 'object-contain',
+    description:
+      "L'application mobile d'Aliz, développée en React Native avec Expo, constitue l'interface du projet, actuellement en développement. Elle guide l'utilisateur depuis l'onboarding (calcul BMR/TDEE, choix du rythme de perte de poids) jusqu'au suivi quotidien de son alimentation et de son activité physique.\n\nL'application propose un frigo virtuel alimenté par scan de codes-barres (expo-camera) ou saisie manuelle, une génération de recettes par IA respectant les macros et contraintes du jour, un planning hebdomadaire avec liste de courses, ainsi qu'un suivi de poids avec courbes et projection d'objectif. Le state global est géré avec Jotai et persisté en local via MMKV, les données serveur avec TanStack Query, et aucune donnée brute de l'API n'atteint directement l'interface grâce à un pattern strict DTO → Mapper → Model. Le projet applique une rigueur particulière sur la qualité : TypeScript strict, tests Jest/RNTL et hooks Git (Husky, Commitlint, validation des noms de branches).",
+    techStack: [
+      { label: 'Frontend Mobile', value: 'React Native, Expo (Router), TypeScript strict' },
+      { label: 'State & Data', value: 'Jotai, MMKV, TanStack Query, Axios' },
+      { label: 'UI', value: 'twrnc (Tailwind React Native), React Navigation' },
+      { label: 'Qualité', value: 'Jest, React Native Testing Library, Husky, Commitlint' },
+    ],
+    features: [
+      {
+        category: 'Suivi Nutritionnel au Quotidien',
+        points: [
+          "Écran \"Aujourd'hui\" affichant l'objectif calorique, l'activité détectée et le déficit en temps réel.",
+          'Frigo virtuel alimenté par scan de codes-barres ou saisie manuelle des aliments disponibles.',
+        ],
+      },
+      {
+        category: 'Recettes & Planning',
+        points: [
+          'Génération de recettes par IA selon les aliments disponibles, les macros et les contraintes matérielles.',
+          'Favoris, planning sur 7 jours et génération automatique de liste de courses.',
+        ],
+      },
+      {
+        category: 'Architecture & Qualité',
+        points: [
+          'State global Jotai persisté en local avec MMKV, cache serveur géré par TanStack Query.',
+          "Pattern strict DTO → Mapper → Model pour qu'aucune donnée brute de l'API n'atteigne l'interface.",
+          'TypeScript strict, tests unitaires (Jest/RNTL) et hooks Git (Husky, Commitlint) pour un historique propre.',
+        ],
+      },
+    ],
+  },
   {
     title: 'Leasy',
     shortDescription:
