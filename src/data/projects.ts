@@ -79,9 +79,74 @@ import alizAppImage2 from '@/assets/projects/aliz-app/2.webp'
 import alizAppImage3 from '@/assets/projects/aliz-app/3.webp'
 import alizAppImage4 from '@/assets/projects/aliz-app/4.webp'
 import alizAppImage5 from '@/assets/projects/aliz-app/5.webp'
+import recipeImageCover from '@/assets/projects/recipe/cover.webp'
+import recipeImage1 from '@/assets/projects/recipe/1.webp'
+import recipeImage2 from '@/assets/projects/recipe/2.webp'
+import recipeImage3 from '@/assets/projects/recipe/3.webp'
+import recipeImage4 from '@/assets/projects/recipe/4.webp'
 
 // --- PROJETS ---
 export const projects = [
+  {
+    title: 'Mes Recettes - App Mobile',
+    shortDescription:
+      'Application Android React Native hors ligne pour enregistrer, organiser et retrouver ses recettes, avec une base SQLite embarquée et une génération de photos par IA en option.',
+    tags: ['React Native', 'Mobile', 'SQLite', 'Hors ligne', 'IA'],
+    liveUrl: '',
+    githubUrl: 'https://github.com/bezedache29/recipe',
+    coverImage: recipeImageCover,
+    imageFit: 'contain',
+    images: [recipeImage1, recipeImage2, recipeImage3, recipeImage4],
+    imagesFit: 'object-contain',
+    description:
+      "Mes Recettes est une application Android développée en React Native CLI (sans Expo) qui permet de conserver toutes ses recettes de cuisine directement sur son téléphone. L'application fonctionne entièrement hors ligne : les données sont stockées dans une base SQLite embarquée (op-sqlite), sans serveur ni compte utilisateur.\n\nChaque recette regroupe un titre, une photo (prise avec l'appareil photo, choisie dans la galerie ou générée par l'IA), une catégorie, plusieurs modes de cuisson, les ingrédients avec leurs quantités, le temps de préparation et les étapes. Un système de filtres complet permet de retrouver rapidement une recette : recherche texte insensible aux accents sur les titres et les ingrédients, filtres par catégorie, cuisson, ingrédients, temps maximum et favoris. En option, l'utilisateur peut générer une photo du plat par intelligence artificielle (API OpenAI) : sa clé personnelle est saisie dans les réglages et stockée de façon sécurisée dans le Keystore Android, jamais dans le code. La structure de la base évolue grâce à un système de migrations versionnées, et les requêtes SQL sont couvertes par des tests Jest.",
+    techStack: [
+      { label: 'Frontend Mobile', value: 'React Native CLI, TypeScript strict, React Navigation' },
+      {
+        label: 'Base de données',
+        value: 'SQLite embarquée (op-sqlite) avec migrations versionnées',
+      },
+      {
+        label: 'Intelligence Artificielle',
+        value: "Génération de photos des plats via l'API Images d'OpenAI (en option)",
+      },
+      {
+        label: 'Natif',
+        value: 'Appareil photo et galerie (react-native-image-picker), Keystore Android',
+      },
+      { label: 'Qualité', value: 'Jest, ESLint, Prettier' },
+    ],
+    features: [
+      {
+        category: 'Gestion des recettes',
+        points: [
+          'Création de recettes complètes : photo, catégorie (entrée, plat, dessert, en-cas), cuissons multiples, ingrédients et quantités, temps de préparation et étapes.',
+          'Ajout aux favoris et liste des modes de cuisson personnalisable (ajout, renommage, suppression).',
+        ],
+      },
+      {
+        category: 'Recherche & Filtres',
+        points: [
+          'Recherche texte sur les titres et les ingrédients, sans tenir compte des accents.',
+          'Filtres combinables par catégorie, cuisson, ingrédients, temps de préparation maximum et favoris, avec choix du tri.',
+        ],
+      },
+      {
+        category: 'Photos par IA (option)',
+        points: [
+          "Génération d'une photo du plat par IA (OpenAI) depuis le formulaire, à partir des détails de la recette.",
+          'Clé OpenAI personnelle saisie dans les réglages et stockée dans le Keystore Android, jamais dans le code.',
+        ],
+      },
+      {
+        category: 'Architecture & Qualité',
+        points: [
+          'Hors ligne : toutes les données restent sur le téléphone dans une base SQLite, seule la génération de photos par IA passe par Internet.',
+          'Schéma de base géré par migrations versionnées et requêtes SQL testées avec Jest.',
+        ],
+      },
+    ],
+  },
   {
     title: 'Aliz - API Backend',
     shortDescription:
@@ -95,8 +160,14 @@ export const projects = [
       "L'API backend d'Aliz, développée en Laravel, constitue le cerveau du projet : elle centralise le calcul nutritionnel, la génération de recettes par IA et l'agrégation des sources de données externes consommées par l'application mobile, actuellement en développement.\n\nElle fait office de proxy sécurisé vers l'API OpenAI (ChatGPT) pour la génération de recettes, sans jamais exposer la clé côté client. L'authentification OAuth2 avec Strava (via Socialite) permet de récupérer l'activité physique de l'utilisateur (Garmin) et d'ajuster dynamiquement son objectif calorique, avec un plancher de sécurité à 1 500 kcal/jour. Une base d'aliments hybride croise les données Ciqual (ANSES), Open Food Facts et Aprifel pour couvrir un maximum de produits, complétée par la synchronisation des pesées d'une balance connectée Renpho. L'ensemble des endpoints (profil, frigo/stock, planning, journal, poids) est testé avec Pest et formaté avec Pint pour garantir un code backend propre et fiable.",
     techStack: [
       { label: 'Backend', value: 'PHP, Laravel, Sanctum, Socialite (OAuth2 Strava)' },
-      { label: 'Intelligence Artificielle', value: 'Proxy sécurisé vers ChatGPT (OpenAI) pour la génération de recettes' },
-      { label: 'Sources de données', value: 'Strava, Renpho, Open Food Facts, Ciqual (ANSES), Aprifel' },
+      {
+        label: 'Intelligence Artificielle',
+        value: 'Proxy sécurisé vers ChatGPT (OpenAI) pour la génération de recettes',
+      },
+      {
+        label: 'Sources de données',
+        value: 'Strava, Renpho, Open Food Facts, Ciqual (ANSES), Aprifel',
+      },
       { label: 'Qualité', value: 'Pest (tests), Laravel Pint (code style)' },
     ],
     features: [
@@ -332,7 +403,7 @@ export const projects = [
     shortDescription:
       'Site vitrine événementiel performant et responsive pour un festival de concerts.',
     tags: ['Front', 'HTML5', 'TailwindCSS', 'JavaScript', 'Site Statique'],
-    liveUrl: 'https://www.les-zaint-fregantables.com/',
+    liveUrl: '',
     githubUrl: '',
     coverImage: zfImageCover,
     imageFit: 'cover',
